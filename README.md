@@ -3,9 +3,8 @@
 
 # **Screens**
 
-## Tasks                                             | ## Notes
-:---------------------------------------------------:|:---------------------------------------------------:
-![MacOS screenshot of Tasks](screens/tasksScreen.png)|![MacOS screenshot of Notes](screens/notesScreen.png)
+## Tasks                                            
+![MacOS screenshot of Tasks](screens/tasksScreen.png) ![MacOS screenshot of Notes](screens/notesScreen.png)
 
 ## Notes
 ![MacOS screenshot of Notes](screens/notesScreen.png)
