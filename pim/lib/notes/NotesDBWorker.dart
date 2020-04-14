@@ -36,7 +36,7 @@ class NotesDBWorker {
       path, // from its path
       version: 1, // version used if it's needed to update the schema
       onOpen: (db) {}, // i am creating one not opening one
-      onCreate: (Database newDb, int v) async {
+      onCreate: (newDb, vers) async {
         // query to create a new database
         await newDb.execute("CREATE TABLE IF NOT EXISTS notes ("
             "id INTEGER PRIMARY KEY,"
@@ -76,10 +76,8 @@ class NotesDBWorker {
     // get a reference to the database
     // through the getter
     Database db = await database;
-
     // query for the last entry and get id + 1
     var val = await db.rawQuery("SELECT MAX(id) + 1 AS id FROM notes");
-
     int id = val.first["id"]; // getting the id + 1
     if (id == null) {
       // if there are no entries
@@ -88,14 +86,11 @@ class NotesDBWorker {
 
     // make an insert query to the database
     // with the note passed as argument
-    // return await db.rawInsert(
-    //   "INSERT INTO notes (id, title, content, color)"
-    //   "VALUES (?, ?, ?, ?)", // ? will be swapped with the values from array
-    //   [id, n.title, n.content, n.color],
-    // );
-
-    // this is an alternative
-    return await db.insert("notes", noteToMap(n));
+    return await db.rawInsert(
+      "INSERT INTO notes (id, title, content, color) "
+      "VALUES (?, ?, ?, ?)",
+      [id, n.title, n.content, n.color],
+    );
   }
 
   Future<Note> get(int id) async {

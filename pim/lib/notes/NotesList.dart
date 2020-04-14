@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:pim/notes/Notes.dart';
 import 'package:scoped_model/scoped_model.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'NotesDBWorker.dart';
@@ -50,7 +49,7 @@ class NotesList extends StatelessWidget {
     return ScopedModel<NotesModel>(
       model: notesModel,
       child: ScopedModelDescendant<NotesModel>(
-        builder: (BuildContext ctx, Widget child, NotesModel model) {
+        builder: (BuildContext ctx, Widget child, NotesModel n) {
           return Scaffold(
             floatingActionButton: FloatingActionButton(
               child: Icon(
