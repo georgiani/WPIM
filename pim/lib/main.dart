@@ -30,6 +30,7 @@ class WPIM extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: "WPIM",
       home: DefaultTabController(
         length: 2,
