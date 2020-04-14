@@ -3,11 +3,8 @@
 
 # **Screens**
 
-## iPhone screenshot of the Notes tab
-![iPhone screenshot of Notes](screens/notesScreen.png)
-
-## MacOS screenshot of the Tasks tab
+## Tasks
 ![MacOS screenshot of Tasks](screens/finishedTaskScreen.png)
 
-## MacOS screenshot of the Calendar in the New Entry screen
+## Calendar in Tasks
 ![MacOS calendar select](screens/taskCalendarScreen.png)
