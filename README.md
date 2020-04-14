@@ -4,7 +4,7 @@
 # **Screens**
 
 ## Tasks
-![MacOS screenshot of Tasks](screens/finishedTaskScreen.png)
+![MacOS screenshot of Tasks](screens/tasksScreen.png)
 
-## Calendar in Tasks
-![MacOS calendar select](screens/taskCalendarScreen.png)
+## Notes
+![MacOS screenshot of Notes](screens/notesScreen.png)
